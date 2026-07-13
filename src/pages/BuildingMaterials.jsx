@@ -85,7 +85,7 @@ export default function BuildingMaterials() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Building Materials</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Building Materials</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             We supply high-grade sand, crushed blue metal aggregates, structural steel, bricks, and concrete blocks direct to site.
           </p>
@@ -95,28 +95,28 @@ export default function BuildingMaterials() {
       {/* Materials List */}
       <section className="section">
         <div className="container">
-          
+
           {/* Category Filter bar */}
           <div className="filter-bar">
-            <button 
+            <button
               className={`filter-btn ${activeCategory === 'all' ? 'active' : ''}`}
               onClick={() => setActiveCategory('all')}
             >
               All Materials
             </button>
-            <button 
+            <button
               className={`filter-btn ${activeCategory === 'sand' ? 'active' : ''}`}
               onClick={() => setActiveCategory('sand')}
             >
               Sands & Aggregates
             </button>
-            <button 
+            <button
               className={`filter-btn ${activeCategory === 'bricks' ? 'active' : ''}`}
               onClick={() => setActiveCategory('bricks')}
             >
               Bricks & Blocks
             </button>
-            <button 
+            <button
               className={`filter-btn ${activeCategory === 'steel' ? 'active' : ''}`}
               onClick={() => setActiveCategory('steel')}
             >
@@ -128,15 +128,15 @@ export default function BuildingMaterials() {
           <div className="grid grid-3">
             {filteredMaterials.map((mat, idx) => (
               <div key={idx} className="service-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column' }}>
-                <span 
-                  style={{ 
+                <span
+                  style={{
                     alignSelf: 'flex-start',
-                    backgroundColor: 'var(--color-concrete-base)', 
-                    color: 'var(--color-steel-blue)', 
-                    fontSize: '0.7rem', 
-                    fontWeight: 700, 
-                    textTransform: 'uppercase', 
-                    padding: '0.25rem 0.5rem', 
+                    backgroundColor: 'var(--color-concrete-base)',
+                    color: 'var(--color-steel-blue)',
+                    fontSize: '0.7rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    padding: '0.25rem 0.5rem',
                     borderRadius: '4px',
                     marginBottom: '1rem',
                     letterSpacing: '0.5px'
@@ -144,11 +144,11 @@ export default function BuildingMaterials() {
                 >
                   {mat.category === 'sand' ? 'Sand & Stone' : mat.category === 'bricks' ? 'Brickwork' : 'Steel & Cement'}
                 </span>
-                
+
                 <h3 style={{ fontSize: '1.2rem', textTransform: 'uppercase', marginBottom: '0.75rem', fontWeight: 800 }}>
                   {mat.name}
                 </h3>
-                
+
                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginBottom: '1.25rem', flexGrow: 1 }}>
                   {mat.desc}
                 </p>
@@ -167,7 +167,7 @@ export default function BuildingMaterials() {
                   ))}
                 </ul>
 
-                <button 
+                <button
                   onClick={() => handleInquire(mat.name)}
                   className="btn btn-outline"
                   style={{ width: '100%', marginTop: 'auto' }}

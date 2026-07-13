@@ -50,7 +50,7 @@ export default function VehicleRental() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Earth Movers & Vehicle Rental</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Earth Movers & Vehicle Rental</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             Fully insured JCB excavators, tipper lorries, and tractors for hire. All rentals include a licensed operator.
           </p>
@@ -77,7 +77,7 @@ export default function VehicleRental() {
                 <h3 style={{ fontSize: '1.25rem', textTransform: 'uppercase', marginBottom: '0.75rem', fontWeight: 800 }}>
                   {m.name}
                 </h3>
-                
+
                 <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1 }}>
                   {m.desc}
                 </p>
@@ -109,7 +109,7 @@ export default function VehicleRental() {
                   ))}
                 </ul>
 
-                <button 
+                <button
                   onClick={() => handleInquire(m.name)}
                   className="btn btn-outline"
                   style={{ width: '100%', marginTop: 'auto' }}

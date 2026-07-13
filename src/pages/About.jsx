@@ -41,7 +41,7 @@ export default function About() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>About Bannari Amman</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>About Bannari Amman</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             Learn about our safety standard, team strength, and the values that drive our construction and logistics work.
           </p>
@@ -167,7 +167,7 @@ export default function About() {
             <h2 className="section-title">Our Engineers</h2>
             <p>Led by qualified engineers with extensive experience in construction planning, materials, and site execution.</p>
           </div>
-          
+
           <div className="grid grid-2" style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div className="why-card" style={{ textAlign: 'center', padding: '2rem' }}>
               <div className="value-icon" style={{ backgroundColor: 'var(--color-charcoal-dark)', color: 'var(--color-safety-orange)', width: '70px', height: '70px', margin: '0 auto 1rem auto' }}>
@@ -188,7 +188,7 @@ export default function About() {
               <a href="tel:9688503306" className="btn btn-outline" style={{ display: 'inline-flex', padding: '0.5rem 1rem', fontSize: '0.8rem' }}>Call: 96885 03306</a>
             </div>
 
-            
+
           </div>
         </div>
       </section>

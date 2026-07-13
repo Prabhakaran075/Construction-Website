@@ -138,8 +138,8 @@ export default function Services() {
     navigate(`/contact?projectType=${slug}`);
   };
 
-  const filteredServices = activeTab === 'all' 
-    ? services 
+  const filteredServices = activeTab === 'all'
+    ? services
     : services.filter(s => s.category === activeTab);
 
   return (
@@ -147,7 +147,7 @@ export default function Services() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Our Services</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Our Services</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             Explore our specialized division of building construction and material transport operations.
           </p>
@@ -157,22 +157,22 @@ export default function Services() {
       {/* Services Tabs and Grid */}
       <section className="section">
         <div className="container">
-          
+
           {/* Service Filters */}
           <div className="service-tabs">
-            <button 
+            <button
               className={`service-tab-btn ${activeTab === 'all' ? 'active' : ''}`}
               onClick={() => setActiveTab('all')}
             >
               All Services
             </button>
-            <button 
+            <button
               className={`service-tab-btn ${activeTab === 'construction' ? 'active' : ''}`}
               onClick={() => setActiveTab('construction')}
             >
               Building & Construction
             </button>
-            <button 
+            <button
               className={`service-tab-btn ${activeTab === 'transport' ? 'active' : ''}`}
               onClick={() => setActiveTab('transport')}
             >
@@ -184,7 +184,7 @@ export default function Services() {
           <div className="grid grid-3">
             {filteredServices.map((service) => (
               <div key={service.id} className="service-card">
-                
+
                 {/* SVG Graphic Banner */}
                 <div className="service-img-box">
                   {service.svgGraphic}
@@ -199,7 +199,7 @@ export default function Services() {
                   </div>
                   <h3>{service.title}</h3>
                   <p>{service.desc}</p>
-                  
+
                   {/* Features checklist */}
                   <ul className="service-features">
                     {service.features.map((feat, idx) => (
@@ -211,9 +211,9 @@ export default function Services() {
                   </ul>
 
                   {/* CTA button */}
-                  <button 
+                  <button
                     onClick={() => handleInquire(service.title)}
-                    className="btn btn-outline" 
+                    className="btn btn-outline"
                     style={{ width: '100%', marginTop: 'auto' }}
                   >
                     Inquire Service

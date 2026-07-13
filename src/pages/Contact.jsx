@@ -94,7 +94,7 @@ export default function Contact() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Get a Quote / Contact</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>Get a Quote / Contact</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             Submit your building drawings, site location, and transport parameters. Our estimators will contact you.
           </p>
