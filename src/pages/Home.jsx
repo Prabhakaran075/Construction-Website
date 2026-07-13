@@ -80,7 +80,7 @@ export default function Home() {
                 Trusted construction planning, building materials, transport, JCB, lorry and tractor rental services.
               </p>
               <div className="hero-buttons">
-                <a href="tel:+15550192831" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                <a href="tel:+918778434867" className="btn btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                   <PhoneCall size={16} />
                   <span>Call Now</span>
                 </a>
