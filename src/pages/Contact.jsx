@@ -389,7 +389,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               title="GPR HQ Map Location"
             ></iframe>
-            <div style={{ position: 'absolute', bottom: '1rem', left: '1rem', background: 'rgba(15, 23, 42, 0.9)', padding: '0.75rem 1rem', borderRadius: '4px', border: '1px solid var(--color-charcoal-light)', color: 'white', fontSize: '0.8rem', zIndex: 10 }}>
+            <div className="map-overlay-card" style={{ position: 'absolute', bottom: '1rem', left: '1rem', background: 'rgba(15, 23, 42, 0.9)', padding: '0.75rem 1rem', borderRadius: '4px', border: '1px solid var(--color-charcoal-light)', color: 'white', fontSize: '0.8rem', zIndex: 10 }}>
               <strong style={{ display: 'block', color: 'var(--color-safety-orange)' }}>GPR HQ & Yard</strong>
               <span style={{ fontSize: '0.7rem', color: '#cbd5e1' }}>Puthukaraipudur, Savandapur, TN 638313</span>
               <a 
