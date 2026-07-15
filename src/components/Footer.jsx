@@ -14,8 +14,11 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="footer-info">
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0, marginBottom: '1.25rem' }}>
-              <img src={GPRLogo} alt="GPR Logo" style={{ height: '40px', width: '40px', borderRadius: '50%', objectFit: 'cover' }} />
-              <span>GPR Construction & Transport</span>
+              <img src={GPRLogo} alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
+              <div className="logo-text">
+                GPR
+                <span>CONSTRUCTION</span>
+              </div>
             </h3>
             <p>
               Your trusted partner for architectural planning, structural designing, sand & building material supply, and earth mover logistics/vehicle rentals.

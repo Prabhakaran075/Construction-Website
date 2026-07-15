@@ -21,7 +21,7 @@ export default function Header() {
           <img src={GPRLogo} alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
           <div className="logo-text">
             GPR
-            <span>CONSTRUCTION & EARTH MOVERS</span>
+            <span>CONSTRUCTION</span>
           </div>
         </Link>
 
