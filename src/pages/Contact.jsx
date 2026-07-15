@@ -9,7 +9,9 @@ export default function Contact() {
   // Form Fields State
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-  const [projectType, setProjectType] = useState('residential');
+  const [projectType, setProjectType] = useState('construction');
+  const [selectedPackage, setSelectedPackage] = useState('none');
+  const [builtUpArea, setBuiltUpArea] = useState('');
   const [location, setLocation] = useState('');
   const [message, setMessage] = useState('');
   const [attachedFiles, setAttachedFiles] = useState([]);
@@ -24,12 +26,21 @@ export default function Contact() {
     const typeParam = searchParams.get('projectType');
     if (typeParam) {
       const decoded = decodeURIComponent(typeParam).toLowerCase();
-      if (decoded.includes('residential')) setProjectType('residential');
-      else if (decoded.includes('renovation')) setProjectType('renovation');
-      else if (decoded.includes('foundation') || decoded.includes('structure')) setProjectType('foundation');
-      else if (decoded.includes('material') || decoded.includes('transport')) setProjectType('transport');
-      else if (decoded.includes('logistics')) setProjectType('logistics');
-      else if (decoded.includes('truck') || decoded.includes('vehicle')) setProjectType('truck-hire');
+      if (decoded.includes('residential') || decoded.includes('construction')) setProjectType('construction');
+      else if (decoded.includes('planning') || decoded.includes('design')) setProjectType('planning');
+      else if (decoded.includes('material')) setProjectType('material');
+      else if (decoded.includes('rental') || decoded.includes('vehicle')) setProjectType('rental');
+    }
+
+    const packageParam = searchParams.get('package');
+    if (packageParam) {
+      setSelectedPackage(packageParam);
+      setProjectType('construction');
+    }
+
+    const areaParam = searchParams.get('area');
+    if (areaParam) {
+      setBuiltUpArea(areaParam);
     }
   }, [searchParams]);
 
@@ -246,6 +257,34 @@ export default function Contact() {
                         <option value="material">Building Materials Supply</option>
                         <option value="rental">Earth Movers & Vehicle Rental</option>
                       </select>
+                    </div>
+
+                    {/* Construction Package */}
+                    <div className="form-group">
+                      <label className="form-label">Select Construction Package</label>
+                      <select
+                        className="form-control"
+                        value={selectedPackage}
+                        onChange={(e) => setSelectedPackage(e.target.value)}
+                      >
+                        <option value="none">-- Select Package (Optional) --</option>
+                        <option value="1999">Basic Plan (Rs. 1999/sq.ft)</option>
+                        <option value="2199">Standard Plan (Rs. 2199/sq.ft)</option>
+                        <option value="2299">Premium Plan (Rs. 2299/sq.ft)</option>
+                        <option value="custom">Need Custom Quote</option>
+                      </select>
+                    </div>
+
+                    {/* Built-up Area (Sq.Ft) */}
+                    <div className="form-group">
+                      <label className="form-label">Built-up Area (Sq.Ft)</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        placeholder="e.g. 1500"
+                        value={builtUpArea}
+                        onChange={(e) => setBuiltUpArea(e.target.value)}
+                      />
                     </div>
 
                     {/* Location */}

@@ -14,6 +14,7 @@ import BuildingMaterials from './pages/BuildingMaterials';
 import VehicleRental from './pages/VehicleRental';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Packages from './pages/Packages';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/construction-services" element={<ConstructionServices />} />
             <Route path="/building-materials" element={<BuildingMaterials />} />
             <Route path="/vehicle-rental" element={<VehicleRental />} />
+            <Route path="/packages" element={<Packages />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

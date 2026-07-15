@@ -749,6 +749,31 @@ textarea {
   border-color: var(--color-steel-blue);
 }
 
+/* Plan Cards styling and active states */
+.why-card.plan-card {
+  border: 1px solid var(--color-concrete-dark);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.why-card.plan-card:hover {
+  border-color: var(--color-safety-orange) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.why-card.plan-card.active {
+  border: 2px solid var(--color-safety-orange) !important;
+  box-shadow: var(--shadow-md);
+}
+
+.why-card.plan-card.premium-featured {
+  border: 2px solid var(--color-steel-blue);
+}
+
+.why-card.plan-card.premium-featured:hover {
+  border-color: var(--color-safety-orange) !important;
+}
+
 .why-icon-box {
   width: 50px;
   height: 50px;

@@ -185,6 +185,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Home Construction Packages Preview Section */}
+      <section className="section" style={{ borderTop: '1px solid var(--color-concrete-dark)', borderBottom: '1px solid var(--color-concrete-dark)' }}>
+        <div className="container">
+          <div className="section-title-wrap">
+            <span style={{ color: 'var(--color-safety-orange)', textTransform: 'uppercase', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '2px', display: 'block', marginBottom: '0.5rem' }}>
+              Simple Square-Foot Pricing
+            </span>
+            <h2 className="section-title">Home Construction Packages</h2>
+            <p>Starting from Rs. 1999 / sq.ft. Choose from our pre-approved material packages with clear budget scopes.</p>
+          </div>
+
+          <div className="grid grid-3" style={{ marginBottom: '2.5rem' }}>
+            {/* Basic Card */}
+            <div className="why-card plan-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '2rem' }}>
+              <div>
+                <h3 style={{ textTransform: 'uppercase', fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: 800 }}>Basic Plan</h3>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '1rem' }}>
+                  <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-charcoal-dark)' }}>Rs. 1999</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>/ sq.ft</span>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
+                  Durable build specifications featuring Ramco/Chettinad cement, fly ash bricks, and Kundan wiring.
+                </p>
+              </div>
+              <Link to="/packages" className="btn btn-outline" style={{ marginTop: 'auto', textAlign: 'center' }}>
+                View Package Details
+              </Link>
+            </div>
+
+            {/* Standard Card */}
+            <div className="why-card plan-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '2rem' }}>
+              <div>
+                <h3 style={{ textTransform: 'uppercase', fontSize: '1.25rem', marginBottom: '0.5rem', fontWeight: 800 }}>Standard Plan</h3>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '1rem' }}>
+                  <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-charcoal-dark)' }}>Rs. 2199</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>/ sq.ft</span>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
+                  Red-brick strength construction, GM modular switches, and Kundan E FAB wiring.
+                </p>
+              </div>
+              <Link to="/packages" className="btn btn-outline" style={{ marginTop: 'auto', textAlign: 'center' }}>
+                View Package Details
+              </Link>
+            </div>
+
+            {/* Premium Card */}
+            <div className="why-card plan-card premium-featured" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '2rem' }}>
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                  <h3 style={{ textTransform: 'uppercase', fontSize: '1.25rem', margin: 0, fontWeight: 800 }}>Premium Plan</h3>
+                  <span style={{ backgroundColor: 'var(--color-steel-blue)', color: 'white', fontSize: '0.6rem', fontWeight: 700, padding: '0.15rem 0.4rem', borderRadius: '3px' }}>POPULAR</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.25rem', marginBottom: '1rem' }}>
+                  <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--color-charcoal-dark)' }}>Rs. 2299</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>/ sq.ft</span>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
+                  Wirecut bricks, premium JSW/Tata 550D steel, Finolex wiring, and solid teakwood woodwork.
+                </p>
+              </div>
+              <Link to="/packages" className="btn btn-outline" style={{ marginTop: 'auto', textAlign: 'center' }}>
+                View Package Details
+              </Link>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center' }}>
+            <Link to="/packages" className="btn btn-outline" style={{ padding: '0.75rem 2rem' }}>
+              Compare All Package Specifications
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Customer Testimonials Section */}
       <section className="section section-dark">
         <div className="container">
