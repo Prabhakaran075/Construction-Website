@@ -187,7 +187,7 @@ export default function BuildingMaterials() {
           <Truck size={40} style={{ color: 'var(--color-safety-orange)', marginBottom: '1rem' }} />
           <h2 style={{ textTransform: 'uppercase', fontSize: '2rem', marginBottom: '1rem', fontWeight: 800 }}>Direct Haulage & Delivery Guarantees</h2>
           <p style={{ color: 'var(--color-text-muted)', maxWidth: '650px', margin: '0 auto 2rem auto' }}>
-            We do not subcontract our material supply deliveries. Bannari Amman operates a direct fleet of blue-metal tipping lorries and payload tractors, ensuring sand, gravel, and steel are securely loaded and delivered precisely when your layout crew requires them.
+            We do not subcontract our material supply deliveries. GPR operates a direct fleet of blue-metal tipping lorries and payload tractors, ensuring sand, gravel, and steel are securely loaded and delivered precisely when your layout crew requires them.
           </p>
           <button onClick={() => navigate('/contact')} className="btn btn-primary">Book Materials Delivery</button>
         </div>

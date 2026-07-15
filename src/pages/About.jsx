@@ -41,7 +41,7 @@ export default function About() {
       {/* Page Header */}
       <section className="section section-dark" style={{ padding: '4rem 0', borderBottom: '4px solid var(--color-safety-orange)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
-          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>About Bannari Amman</h1>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', textTransform: 'uppercase', marginBottom: '0.5rem', fontWeight: 800 }}>About GPR Construction</h1>
           <p style={{ color: '#cbd5e1', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
             Learn about our safety standard, team strength, and the values that drive our construction and logistics work.
           </p>
@@ -57,7 +57,7 @@ export default function About() {
                 Your Construction & Logistics Partner
               </h2>
               <p>
-                Founded in 2011, Bannari Amman Construction was created to solve a common bottleneck in building projects: coordination delays between building crews and raw material suppliers. By operating our own fleet of tippers, cranes, and logistics vehicles alongside our licensed construction team, we cut out the middleman.
+                Founded in 2011, GPR Construction was created to solve a common bottleneck in building projects: coordination delays between building crews and raw material suppliers. By operating our own fleet of tippers, cranes, and logistics vehicles alongside our licensed construction team, we cut out the middleman.
               </p>
               <p>
                 Whether we are excavating for a structural concrete foundation, building a multi-story residential home, or transporting structural framing to a commercial job site, our priority is safe and reliable execution.
@@ -70,7 +70,7 @@ export default function About() {
             {/* Structured CSS Grid layout for stats */}
             <div style={{ background: '#1e293b', padding: '2.5rem', borderRadius: '8px', border: '2px solid var(--color-charcoal-light)', color: 'white' }}>
               <h3 style={{ textTransform: 'uppercase', marginBottom: '1.5rem', borderBottom: '2px solid #334155', paddingBottom: '0.5rem', color: 'var(--color-safety-orange)' }}>
-                Bannari Amman Credentials & Stats
+                GPR Credentials & Stats
               </h3>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
                 {stats.map((s, idx) => (
@@ -83,7 +83,7 @@ export default function About() {
               <div style={{ marginTop: '2.5rem', background: '#0f172a', padding: '1rem', borderRadius: '4px', border: '1px solid #334155', fontSize: '0.85rem' }}>
                 <p style={{ margin: 0, color: '#94a3b8' }}>
                   <strong style={{ color: 'var(--color-text-light)', display: 'block', marginBottom: '0.25rem' }}>✓ Fully Insured & Licensed</strong>
-                  Bannari Amman holds general liability coverage up to $5M, heavy-vehicle logistics insurance, and Class-A contracting licenses.
+                  GPR Construction holds general liability coverage up to Rs. 2M, heavy-vehicle logistics insurance, and Class-A contracting licenses.
                 </p>
               </div>
             </div>

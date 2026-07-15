@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Clock, Users, Truck, DollarSign, Award, Star, PhoneCall } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Clock, Users, Truck, IndianRupee, Award, Star, PhoneCall } from 'lucide-react';
 
 export default function Home() {
   const testimonials = [
     {
       name: "Marcus Vance",
       role: "Developer, Vance Housing projects",
-      content: "Bannari Amman Construction handled our entire layout planning, concrete slab foundations, and brick supply. Their integrated JCB rental and aggregate trucking meant we didn't face scheduling gaps. Solid execution.",
+      content: "GPR Construction handled our entire layout planning, concrete slab foundations, and brick supply. Their integrated JCB rental and aggregate trucking meant we didn't face scheduling gaps. Solid execution.",
       stars: 5,
       avatar: "MV"
     },
@@ -21,7 +21,7 @@ export default function Home() {
     {
       name: "Arthur Pendelton",
       role: "Site Manager, LogiCorp",
-      content: "Our project required 400 tons of M Sand and aggregates within a tight timeframe. Bannari Amman's lorry logistics fleet moved the material on time, and their tractor operators clearing the yard were top-tier.",
+      content: "Our project required 400 tons of M Sand and aggregates within a tight timeframe. GPR's lorry logistics fleet moved the material on time, and their tractor operators clearing the yard were top-tier.",
       stars: 5,
       avatar: "AP"
     }
@@ -49,7 +49,7 @@ export default function Home() {
       desc: "Fully-insured lorries, tractors, and JCB excavators operated by certified commercial operators."
     },
     {
-      icon: <DollarSign size={24} />,
+      icon: <IndianRupee size={24} />,
       title: "Transparent Estimates",
       desc: "Detailed building plan bills, clear material tonnage rates, and straightforward vehicle rental pricing."
     },
@@ -74,7 +74,7 @@ export default function Home() {
                 <span>Building Materials & Earth Movers</span>
               </div>
               <h1 className="hero-headline" style={{ fontSize: '3rem' }}>
-                Bannari Amman <span>Construction</span>
+                GPR <span>Construction</span>
               </h1>
               <p className="hero-subtitle" style={{ fontSize: '1.25rem', marginBottom: '2rem' }}>
                 Trusted construction planning, building materials, transport, JCB, lorry and tractor rental services.
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
               <div className="intro-desc">
                 <p>
-                  At <strong>Bannari Amman Construction</strong>, we combine engineering planning with physical material logistics. We handle local municipality building plan approvals, structural engineering, bank loan documentation, and supply the building materials (M Sand, Hollow Blocks, steel, cement) directly to the site using our own JCB loaders, tractors, and tipper lorries.
+                  At <strong>GPR Construction</strong>, we combine engineering planning with physical material logistics. We handle local municipality building plan approvals, structural engineering, bank loan documentation, and supply the building materials (M Sand, Hollow Blocks, steel, cement) directly to the site using our own JCB loaders, tractors, and tipper lorries.
                 </p>
                 <div style={{ display: 'flex', gap: '2rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
                   <div>
@@ -168,7 +168,7 @@ export default function Home() {
       <section className="section section-gray">
         <div className="container">
           <div className="section-title-wrap">
-            <h2 className="section-title">Why Choose Bannari Amman?</h2>
+            <h2 className="section-title">Why Choose GPR?</h2>
             <p>Our combined build services, wholesale material deck, and direct earth mover fleet ensure your project stays on schedule and in budget.</p>
           </div>
           <div className="grid grid-3">

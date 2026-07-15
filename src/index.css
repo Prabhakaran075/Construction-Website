@@ -1964,6 +1964,11 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 
+  .grid-responsive-mobile {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
   .form-group-full {
     grid-column: span 1;
   }

@@ -159,7 +159,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-info-detail">
                     <h4>Project Bid Submissions</h4>
-                    <a href="mailto:bids@bannariammambuild.com" style={{ color: 'white' }}>bids@bannariammambuild.com</a>
+                    <a href="mailto:bids@gprbuild.com" style={{ color: 'white' }}>bids@gprbuild.com</a>
                   </div>
                 </div>
 
@@ -168,10 +168,10 @@ export default function Contact() {
                     <MapPin size={18} />
                   </div>
                   <div className="contact-info-detail">
-                    <h4>Bannari Amman HQ & Yard</h4>
+                    <h4>GPR HQ & Yard</h4>
                     <p style={{ color: 'white' }}>
-                      123 Industrial Parkway, Suite A<br />
-                      Metro City, MC 90210
+                      Puthukaraipudur,Savandapur,<br />
+                      Tamil Nadu 638313
                     </p>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export default function Contact() {
                       <input
                         type="tel"
                         className="form-control"
-                        placeholder="e.g. +1 (555) 012-3456"
+                        placeholder="e.g. +91 0123456789"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         required
@@ -377,28 +377,30 @@ export default function Contact() {
 
           </div>
 
-          {/* Integrated Mock Map Section */}
-          <div className="map-container">
-            <div className="map-placeholder">
-              <MapPin size={40} />
-              <h4>Bannari Amman HQ Location</h4>
-              <p>123 Industrial Parkway, Suite A, Metro City, MC 90210</p>
-              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', background: 'var(--color-concrete-light)', padding: '0.35rem 0.75rem', borderRadius: '4px', border: '1px solid var(--color-concrete-dark)', marginTop: '0.5rem', fontWeight: 600 }}>
-                GPS COORDS: 40.7128° N, 74.0060° W
-              </span>
-
-              {/* Map grid lines simulation */}
-              <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.1, pointerEvents: 'none', border: '1px solid currentColor' }}>
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                      <rect width="20" height="20" fill="none" />
-                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" strokeWidth="1" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                </svg>
-              </div>
+          {/* Integrated Live Google Map Section */}
+          <div className="map-container" style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--color-concrete-dark)', boxShadow: 'var(--shadow-sm)' }}>
+            <iframe 
+              src="https://maps.google.com/maps?q=11.487073,77.480951&z=15&output=embed" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="GPR HQ Map Location"
+            ></iframe>
+            <div style={{ position: 'absolute', bottom: '1rem', left: '1rem', background: 'rgba(15, 23, 42, 0.9)', padding: '0.75rem 1rem', borderRadius: '4px', border: '1px solid var(--color-charcoal-light)', color: 'white', fontSize: '0.8rem', zIndex: 10 }}>
+              <strong style={{ display: 'block', color: 'var(--color-safety-orange)' }}>GPR HQ & Yard</strong>
+              <span style={{ fontSize: '0.7rem', color: '#cbd5e1' }}>Puthukaraipudur, Savandapur, TN 638313</span>
+              <a 
+                href="https://maps.app.goo.gl/dNcT3bFKpimoGRD8A" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary" 
+                style={{ display: 'block', padding: '0.35rem 0.75rem', fontSize: '0.7rem', marginTop: '0.5rem', textAlign: 'center' }}
+              >
+                Open in Google Maps
+              </a>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, HardHat } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import GPRLogo from '../assets/GPR.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,8 +14,8 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="footer-info">
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0, marginBottom: '1.25rem' }}>
-              <HardHat size={28} className="logo-icon-box" style={{ color: '#0f172a', padding: '4px' }} />
-              <span>Bannari Amman Construction</span>
+              <img src={GPRLogo} alt="GPR Logo" style={{ height: '40px', width: '40px', borderRadius: '50%', objectFit: 'cover' }} />
+              <span>GPR Construction & Transport</span>
             </h3>
             <p>
               Your trusted partner for architectural planning, structural designing, sand & building material supply, and earth mover logistics/vehicle rentals.
@@ -78,7 +79,7 @@ export default function Footer() {
               <Mail size={18} />
               <div>
                 <h4>Email Support</h4>
-                <a href="mailto:info@bannariammambuild.com">info@bannariammambuild.com</a>
+                <a href="mailto:info@gprbuild.com">info@gprbuild.com</a>
               </div>
             </div>
             <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--color-charcoal-light)', paddingTop: '1rem' }}>
@@ -95,11 +96,11 @@ export default function Footer() {
 
         {/* Footer Bottom copyright bar */}
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Bannari Amman Construction. All rights reserved.</p>
+          <p>&copy; {currentYear} GPR Construction & Transport. All rights reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/contact">Privacy Policy</Link>
             <Link to="/contact">Terms of Service</Link>
-            <a href="tel:+15550192831">Emergency Support</a>
+            <a href="tel:+918778434867">Emergency Support</a>
           </div>
         </div>
       </div>
