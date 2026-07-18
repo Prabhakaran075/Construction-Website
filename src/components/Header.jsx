@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
-import GPRLogo from '../assets/GPR.png';
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-container">
         <Link to="/" className="logo-link" onClick={closeMenu}>
-          <img src={GPRLogo} alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
+          <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784298491/GPR_clg45y.png" alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
           <div className="logo-text">
             GPR
             <span>CONSTRUCTION</span>

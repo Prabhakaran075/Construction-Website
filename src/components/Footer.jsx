@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import GPRLogo from '../assets/GPR.png';
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Company Brief */}
           <div className="footer-info">
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: 0, marginBottom: '1.25rem' }}>
-              <img src={GPRLogo} alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
+              <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784298491/GPR_clg45y.png" alt="GPR Logo" style={{ height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover' }} />
               <div className="logo-text">
                 GPR
                 <span>CONSTRUCTION</span>
@@ -82,7 +82,7 @@ export default function Footer() {
               <Mail size={18} />
               <div>
                 <h4>Email Support</h4>
-                <a href="mailto:info@gprbuild.com">info@gprbuild.com</a>
+                <a href="mailto:gprconstruction2@gmail.com">gprconstruction2@gmail.com</a>
               </div>
             </div>
             <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--color-charcoal-light)', paddingTop: '1rem' }}>
@@ -101,8 +101,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>&copy; {currentYear} GPR Construction & Transport. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <Link to="/contact">Privacy Policy</Link>
-            <Link to="/contact">Terms of Service</Link>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-service">Terms of Service</Link>
             <a href="tel:+918778434867">Emergency Support</a>
           </div>
         </div>

@@ -1,6 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Upload, X, FileText, CheckCircle2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration
+// Replace with your actual credentials from the EmailJS Dashboard
+const EMAILJS_SERVICE_ID = "service_v7038eh";
+const EMAILJS_TEMPLATE_ID = "template_3nlnm6g";
+const EMAILJS_PUBLIC_KEY = "qLqcHoYbo56ND-YBG";
+
+// Choose your file hosting method:
+// - Set to true to upload permanently to your Cloudinary account (Requires creating an Unsigned Upload Preset).
+// - Set to false to use the zero-signup, zero-configuration uploader (tmpfiles.org).
+const USE_CLOUDINARY = false;
+
+// Cloudinary Credentials (Only used if USE_CLOUDINARY is set to true)
+const CLOUDINARY_CLOUD_NAME = "j2vormve";
+const CLOUDINARY_UPLOAD_PRESET = "gpr_preset"; // Must be configured as "Unsigned" in Cloudinary settings
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -19,6 +35,7 @@ export default function Contact() {
   // Interaction States
   const [isDragActive, setIsDragActive] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   // Handle prefilled service type from query parameters
@@ -44,17 +61,105 @@ export default function Contact() {
     }
   }, [searchParams]);
 
+  // Upload attachment helper
+  const uploadAttachment = async (file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    if (USE_CLOUDINARY) {
+      formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+      try {
+        const response = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          const errData = await response.json().catch(() => ({}));
+          throw new Error(errData?.error?.message || `HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data.secure_url;
+      } catch (err) {
+        throw new Error(`Cloudinary upload failed: ${err.message}. (Hint: Exposing API keys or API secrets on client-side React is insecure. Unsigned Upload Presets are required for client-side uploads. Please verify your settings.)`);
+      }
+    } else {
+      // Default: Public temporary host (tmpfiles.org)
+      try {
+        const response = await fetch('https://tmpfiles.org/api/v1/upload', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error(`Upload server responded with ${response.status}`);
+        }
+
+        const resData = await response.json();
+        
+        // Convert the detail page URL to a direct download link:
+        if (resData && resData.data && resData.data.url) {
+          return resData.data.url.replace('https://tmpfiles.org/', 'https://tmpfiles.org/dl/');
+        }
+        throw new Error("Invalid response format from temporary file server.");
+      } catch (err) {
+        throw new Error(`Attachment upload failed: ${err.message}. Please check your connection.`);
+      }
+    }
+  };
+
   // Form Submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name.trim() || !phone.trim() || !location.trim()) {
       setErrorMessage("Please fill in all required fields (Name, Phone, and Location).");
       return;
     }
 
-    // Simulate successful API call
+    setIsSending(true);
     setErrorMessage('');
-    setIsSubmitted(true);
+
+    try {
+      // 1. Upload files to public host (if any)
+      const uploadedUrls = [];
+      for (const item of attachedFiles) {
+        if (item.fileObject) {
+          const url = await uploadAttachment(item.fileObject);
+          uploadedUrls.push(url);
+        }
+      }
+
+      // 2. Format file URLs string
+      const fileUrlsString = uploadedUrls.length > 0
+        ? uploadedUrls.map((url, i) => `File ${i + 1}: ${url}`).join('\n')
+        : 'No files attached.';
+
+      // 3. Send message via EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          from_phone: phone,
+          project_type: projectType,
+          selected_package: selectedPackage,
+          built_up_area: builtUpArea || 'N/A',
+          location: location,
+          message: message || 'No additional message.',
+          file_attachments: fileUrlsString
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setErrorMessage('');
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      setErrorMessage(err.message || "Failed to submit request. Please verify your internet connection or email configuration.");
+    } finally {
+      setIsSending(false);
+    }
   };
 
   // Drag and Drop files
@@ -86,8 +191,9 @@ export default function Contact() {
 
   const addFilesToList = (fileList) => {
     const newFiles = Array.from(fileList).map(file => ({
+      fileObject: file, // Keep raw file reference for uploading
       name: file.name,
-      size: (file.size / (1024 * 1024)).toFixed(2) + ' MB' // MB size
+      size: (file.size / (1024 * 1024)).toFixed(2) + ' MB'
     }));
     setAttachedFiles(prev => [...prev, ...newFiles]);
   };
@@ -159,7 +265,7 @@ export default function Contact() {
                   </div>
                   <div className="contact-info-detail">
                     <h4>Project Bid Submissions</h4>
-                    <a href="mailto:bids@gprbuild.com" style={{ color: 'white' }}>bids@gprbuild.com</a>
+                    <a href="mailto:gprconstruction2@gmail.com" style={{ color: 'white' }}>gprconstruction2@gmail.com</a>
                   </div>
                 </div>
 
@@ -367,8 +473,8 @@ export default function Contact() {
                   </div>
 
                   <div className="form-submit-wrap">
-                    <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                      Submit Estimate Request
+                    <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={isSending}>
+                      {isSending ? "Uploading Attachments & Submitting Request..." : "Submit Estimate Request"}
                     </button>
                   </div>
                 </form>
@@ -379,24 +485,24 @@ export default function Contact() {
 
           {/* Integrated Live Google Map Section */}
           <div className="map-container" style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--color-concrete-dark)', boxShadow: 'var(--shadow-sm)' }}>
-            <iframe 
-              src="https://maps.google.com/maps?q=11.487073,77.480951&z=15&output=embed" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://maps.google.com/maps?q=11.487073,77.480951&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="GPR HQ Map Location"
             ></iframe>
             <div className="map-overlay-card" style={{ position: 'absolute', bottom: '1rem', left: '1rem', background: 'rgba(15, 23, 42, 0.9)', padding: '0.75rem 1rem', borderRadius: '4px', border: '1px solid var(--color-charcoal-light)', color: 'white', fontSize: '0.8rem', zIndex: 10 }}>
               <strong style={{ display: 'block', color: 'var(--color-safety-orange)' }}>GPR HQ & Yard</strong>
               <span style={{ fontSize: '0.7rem', color: '#cbd5e1' }}>Puthukaraipudur, Savandapur, TN 638313</span>
-              <a 
-                href="https://maps.app.goo.gl/dNcT3bFKpimoGRD8A" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-primary" 
+              <a
+                href="https://maps.app.goo.gl/dNcT3bFKpimoGRD8A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
                 style={{ display: 'block', padding: '0.35rem 0.75rem', fontSize: '0.7rem', marginTop: '0.5rem', textAlign: 'center' }}
               >
                 Open in Google Maps

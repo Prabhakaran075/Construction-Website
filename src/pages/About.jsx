@@ -54,7 +54,7 @@ export default function About() {
           <div className="about-hero-grid">
             <div className="about-content">
               <h2 style={{ borderLeft: '4px solid var(--color-safety-orange)', paddingLeft: '1rem' }}>
-                Your Construction & Logistics Partner
+                Your Construction
               </h2>
               <p>
                 Founded in 2011, GPR Construction was created to solve a common bottleneck in building projects: coordination delays between building crews and raw material suppliers. By operating our own fleet of tippers, cranes, and logistics vehicles alongside our licensed construction team, we cut out the middleman.

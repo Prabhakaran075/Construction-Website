@@ -407,7 +407,8 @@ textarea {
   border-left: 3px solid transparent;
 }
 
-.dropdown-item:hover, .dropdown-item.active {
+.dropdown-item:hover,
+.dropdown-item.active {
   background-color: var(--color-charcoal-light);
   color: var(--color-text-light);
   border-left-color: var(--color-safety-orange);
@@ -1941,7 +1942,8 @@ textarea.form-control {
     border-left: none;
   }
 
-  .dropdown-item:hover, .dropdown-item.active {
+  .dropdown-item:hover,
+  .dropdown-item.active {
     background-color: transparent;
     color: var(--color-text-light);
   }

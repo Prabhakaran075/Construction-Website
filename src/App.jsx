@@ -15,6 +15,8 @@ import VehicleRental from './pages/VehicleRental';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Packages from './pages/Packages';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             <Route path="/packages" element={<Packages />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
         </main>
 

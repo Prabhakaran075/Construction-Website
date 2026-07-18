@@ -22,27 +22,29 @@ export default function Projects() {
       beforeLabel: "Bare Excavated Lot (Dec 2025)",
       afterLabel: "Completed 4-Bedroom Home (Aug 2026)",
       beforeSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#334155' }}>
-          <rect x="0" y="0" width="400" height="250" fill="#334155" />
-          <path d="M0 200 Q100 160 200 210 T400 190 L400 250 L0 250 Z" fill="#78350f" />
-          <path d="M50 180 L110 180 L80 150 Z" stroke="#cbd5e1" strokeWidth="2" />
-          <rect x="130" y="160" width="80" height="40" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4,4" />
-          <line x1="170" y1="130" x2="170" y2="160" stroke="#f97316" strokeWidth="2" />
-          <circle cx="170" cy="120" r="10" stroke="#f97316" strokeWidth="2" fill="#0f172a" />
-          <text x="20" y="40" fill="#cbd5e1" fontSize="12" fontWeight="bold">PROJECT PHASE: GROUNDWORK</text>
-        </svg>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#334155' }}>
+        //   <rect x="0" y="0" width="400" height="250" fill="#334155" />
+        //   <path d="M0 200 Q100 160 200 210 T400 190 L400 250 L0 250 Z" fill="#78350f" />
+        //   <path d="M50 180 L110 180 L80 150 Z" stroke="#cbd5e1" strokeWidth="2" />
+        //   <rect x="130" y="160" width="80" height="40" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4,4" />
+        //   <line x1="170" y1="130" x2="170" y2="160" stroke="#f97316" strokeWidth="2" />
+        //   <circle cx="170" cy="120" r="10" stroke="#f97316" strokeWidth="2" fill="#0f172a" />
+        //   <text x="20" y="40" fill="#cbd5e1" fontSize="12" fontWeight="bold">PROJECT PHASE: GROUNDWORK</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784373153/Riverdale_Heights_Custom_Home_before_ycpcai.png" alt="" />
       ),
       afterSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
-          <rect x="0" y="0" width="400" height="250" fill="#1e293b" />
-          <path d="M0 210 Q200 210 400 210 L400 250 L0 250 Z" fill="#475569" />
-          {/* Finished House */}
-          <rect x="100" y="110" width="200" height="100" rx="4" fill="#0f172a" stroke="#0284c7" strokeWidth="3" />
-          <path d="M80 110 L200 40 L320 110 Z" fill="#f97316" />
-          <rect x="130" y="140" width="45" height="45" fill="#1e293b" rx="2" stroke="#cbd5e1" strokeWidth="2" />
-          <rect x="225" y="140" width="45" height="70" fill="#cbd5e1" rx="2" />
-          <text x="20" y="40" fill="#94a3b8" fontSize="12" fontWeight="bold">PROJECT PHASE: COMPLETED BUILD</text>
-        </svg>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
+        //   <rect x="0" y="0" width="400" height="250" fill="#1e293b" />
+        //   <path d="M0 210 Q200 210 400 210 L400 250 L0 250 Z" fill="#475569" />
+        //   {/* Finished House */}
+        //   <rect x="100" y="110" width="200" height="100" rx="4" fill="#0f172a" stroke="#0284c7" strokeWidth="3" />
+        //   <path d="M80 110 L200 40 L320 110 Z" fill="#f97316" />
+        //   <rect x="130" y="140" width="45" height="45" fill="#1e293b" rx="2" stroke="#cbd5e1" strokeWidth="2" />
+        //   <rect x="225" y="140" width="45" height="70" fill="#cbd5e1" rx="2" />
+        //   <text x="20" y="40" fill="#94a3b8" fontSize="12" fontWeight="bold">PROJECT PHASE: COMPLETED BUILD</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784373151/Riverdale_Heights_Custom_Home_after_hjz6iv.png" alt="" />
       )
     },
     {
@@ -58,27 +60,29 @@ export default function Projects() {
       beforeLabel: "Original Partition Walls (Feb 2026)",
       afterLabel: "Open-Plan Living Layout (May 2026)",
       beforeSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#334155' }}>
-          <rect x="40" y="40" width="320" height="170" fill="#0f172a" stroke="#94a3b8" strokeWidth="2" />
-          {/* Wall partition grids */}
-          <line x1="140" y1="40" x2="140" y2="210" stroke="#f97316" strokeWidth="4" />
-          <line x1="260" y1="40" x2="260" y2="210" stroke="#f97316" strokeWidth="4" />
-          <line x1="140" y1="120" x2="260" y2="120" stroke="#cbd5e1" strokeWidth="2" />
-          <text x="20" y="30" fill="#cbd5e1" fontSize="12" fontWeight="bold">BEFORE: SEPARATED ROOMS</text>
-        </svg>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#334155' }}>
+        //   <rect x="40" y="40" width="320" height="170" fill="#0f172a" stroke="#94a3b8" strokeWidth="2" />
+        //   {/* Wall partition grids */}
+        //   <line x1="140" y1="40" x2="140" y2="210" stroke="#f97316" strokeWidth="4" />
+        //   <line x1="260" y1="40" x2="260" y2="210" stroke="#f97316" strokeWidth="4" />
+        //   <line x1="140" y1="120" x2="260" y2="120" stroke="#cbd5e1" strokeWidth="2" />
+        //   <text x="20" y="30" fill="#cbd5e1" fontSize="12" fontWeight="bold">BEFORE: SEPARATED ROOMS</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784373147/Oakridge_Structural_Remodel_before_j7y3zu.png" alt="" />
       ),
       afterSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
-          <rect x="40" y="40" width="320" height="170" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
-          {/* Steel overhead lintel */}
-          <rect x="42" y="42" width="316" height="24" fill="#0284c7" />
-          <text x="130" y="58" fill="white" fontSize="10" fontWeight="bold">6M STRUCTURAL STEEL BEAM</text>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
+        //   <rect x="40" y="40" width="320" height="170" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
+        //   {/* Steel overhead lintel */}
+        //   <rect x="42" y="42" width="316" height="24" fill="#0284c7" />
+        //   <text x="130" y="58" fill="white" fontSize="10" fontWeight="bold">6M STRUCTURAL STEEL BEAM</text>
 
-          {/* Large windows */}
-          <rect x="70" y="90" width="100" height="120" fill="none" stroke="#f97316" strokeWidth="2" />
-          <rect x="230" y="90" width="100" height="120" fill="none" stroke="#f97316" strokeWidth="2" />
-          <text x="20" y="30" fill="#94a3b8" fontSize="12" fontWeight="bold">AFTER: OPEN-PLAN INTEGRATED SPACE</text>
-        </svg>
+        //   {/* Large windows */}
+        //   <rect x="70" y="90" width="100" height="120" fill="none" stroke="#f97316" strokeWidth="2" />
+        //   <rect x="230" y="90" width="100" height="120" fill="none" stroke="#f97316" strokeWidth="2" />
+        //   <text x="20" y="30" fill="#94a3b8" fontSize="12" fontWeight="bold">AFTER: OPEN-PLAN INTEGRATED SPACE</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784373146/Oakridge_Structural_Remodel_after_ykghbd.png" alt="" />
       )
     },
     {
@@ -92,17 +96,18 @@ export default function Projects() {
       workType: "Soil compacting, Concrete formwork, Steel rebar grid",
       hasBeforeAfter: false,
       graphicSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
-          <rect x="20" y="140" width="360" height="90" fill="#475569" stroke="#cbd5e1" strokeWidth="2" />
-          <line x1="20" y1="170" x2="380" y2="170" stroke="#f97316" strokeWidth="2" />
-          <line x1="20" y1="200" x2="380" y2="200" stroke="#f97316" strokeWidth="2" />
-          <path d="M50 140 V230 M90 140 V230 M130 140 V230 M170 140 V230 M210 140 V230 M250 140 V230 M290 140 V230 M330 140 V230 M370 140 V230" stroke="#cbd5e1" strokeWidth="1" />
-          {/* Level surveying equipment */}
-          <line x1="200" y1="60" x2="170" y2="140" stroke="#e2e8f0" strokeWidth="3" />
-          <line x1="200" y1="60" x2="230" y2="140" stroke="#e2e8f0" strokeWidth="3" />
-          <circle cx="200" cy="50" r="12" fill="#f97316" />
-          <text x="20" y="30" fill="#f97316" fontSize="12" fontWeight="bold">CONCRETE REINFORCING SLAB - ACTIVE</text>
-        </svg>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#1e293b' }}>
+        //   <rect x="20" y="140" width="360" height="90" fill="#475569" stroke="#cbd5e1" strokeWidth="2" />
+        //   <line x1="20" y1="170" x2="380" y2="170" stroke="#f97316" strokeWidth="2" />
+        //   <line x1="20" y1="200" x2="380" y2="200" stroke="#f97316" strokeWidth="2" />
+        //   <path d="M50 140 V230 M90 140 V230 M130 140 V230 M170 140 V230 M210 140 V230 M250 140 V230 M290 140 V230 M330 140 V230 M370 140 V230" stroke="#cbd5e1" strokeWidth="1" />
+        //   {/* Level surveying equipment */}
+        //   <line x1="200" y1="60" x2="170" y2="140" stroke="#e2e8f0" strokeWidth="3" />
+        //   <line x1="200" y1="60" x2="230" y2="140" stroke="#e2e8f0" strokeWidth="3" />
+        //   <circle cx="200" cy="50" r="12" fill="#f97316" />
+        //   <text x="20" y="30" fill="#f97316" fontSize="12" fontWeight="bold">CONCRETE REINFORCING SLAB - ACTIVE</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784372635/Commercial_Slab_Foundations_qwl30h.png" alt="" />
       )
     },
     {
@@ -116,22 +121,23 @@ export default function Projects() {
       workType: "Permit securing, Route clearing, Heavy haulage, Escort sync",
       hasBeforeAfter: false,
       graphicSvg: (
-        <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#0f172a' }}>
-          <line x1="0" y1="200" x2="400" y2="200" stroke="#cbd5e1" strokeWidth="3" />
-          {/* Heavy logistics flatbed transport */}
-          <rect x="40" y="140" width="220" height="45" rx="3" fill="#1e293b" stroke="#0284c7" strokeWidth="2" />
-          <rect x="260" y="150" width="50" height="35" rx="3" fill="#f97316" />
-          {/* Wheels */}
-          <circle cx="70" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-          <circle cx="110" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-          <circle cx="210" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-          <circle cx="250" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-          <circle cx="285" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-          {/* Steel beams cargo */}
-          <rect x="50" y="105" width="200" height="15" fill="#94a3b8" />
-          <rect x="60" y="122" width="180" height="15" fill="#64748b" />
-          <text x="20" y="40" fill="#0284c7" fontSize="12" fontWeight="bold">HEAVY HAULAGE ROUTING ACTIVE</text>
-        </svg>
+        // <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: '100%', background: '#0f172a' }}>
+        //   <line x1="0" y1="200" x2="400" y2="200" stroke="#cbd5e1" strokeWidth="3" />
+        //   {/* Heavy logistics flatbed transport */}
+        //   <rect x="40" y="140" width="220" height="45" rx="3" fill="#1e293b" stroke="#0284c7" strokeWidth="2" />
+        //   <rect x="260" y="150" width="50" height="35" rx="3" fill="#f97316" />
+        //   {/* Wheels */}
+        //   <circle cx="70" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+        //   <circle cx="110" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+        //   <circle cx="210" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+        //   <circle cx="250" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+        //   <circle cx="285" cy="195" r="14" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+        //   {/* Steel beams cargo */}
+        //   <rect x="50" y="105" width="200" height="15" fill="#94a3b8" />
+        //   <rect x="60" y="122" width="180" height="15" fill="#64748b" />
+        //   <text x="20" y="40" fill="#0284c7" fontSize="12" fontWeight="bold">HEAVY HAULAGE ROUTING ACTIVE</text>
+        // </svg>
+        <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784372693/Structural_Steel_Haulage_Corridor_v7qzjw.png" alt="" />
       )
     }
   ];

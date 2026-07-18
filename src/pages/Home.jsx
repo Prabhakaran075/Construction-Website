@@ -94,32 +94,33 @@ export default function Home() {
             {/* Interactive SVG graphic depicting construction framing & earth movers */}
             <div className="hero-image-container">
               <div className="hero-img-box" style={{ background: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ padding: '2rem' }}>
-                  {/* Grid layout lines */}
-                  <path d="M0 50 H400 M0 100 H400 M0 150 H400 M0 200 H400 M0 250 H400 M0 300 H400 M0 350 H400" stroke="#334155" strokeWidth="0.5" />
-                  <path d="M50 0 V400 M100 0 V400 M150 0 V400 M200 0 V400 M250 0 V400 M300 0 V400 M350 0 V400" stroke="#334155" strokeWidth="0.5" />
+                {/* <svg width="100%" height="100%" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ padding: '2rem' }}> */}
+                {/* Grid layout lines */}
+                <path d="M0 50 H400 M0 100 H400 M0 150 H400 M0 200 H400 M0 250 H400 M0 300 H400 M0 350 H400" stroke="#334155" strokeWidth="0.5" />
+                <path d="M50 0 V400 M100 0 V400 M150 0 V400 M200 0 V400 M250 0 V400 M300 0 V400 M350 0 V400" stroke="#334155" strokeWidth="0.5" />
 
-                  {/* Structure (Construction division) */}
-                  <rect x="60" y="160" width="150" height="180" rx="2" stroke="#0284c7" strokeWidth="3" fill="#0f172a" fillOpacity="0.8" />
-                  <path d="M40 160 L135 80 L230 160 Z" stroke="#f97316" strokeWidth="4" fill="#0f172a" fillOpacity="0.4" />
-                  <line x1="135" y1="80" x2="135" y2="160" stroke="#f97316" strokeWidth="3" />
-                  <line x1="85" y1="120" x2="135" y2="160" stroke="#f97316" strokeWidth="2" />
-                  <line x1="185" y1="120" x2="135" y2="160" stroke="#f97316" strokeWidth="2" />
+                {/* Structure (Construction division) */}
+                <rect x="60" y="160" width="150" height="180" rx="2" stroke="#0284c7" strokeWidth="3" fill="#0f172a" fillOpacity="0.8" />
+                <path d="M40 160 L135 80 L230 160 Z" stroke="#f97316" strokeWidth="4" fill="#0f172a" fillOpacity="0.4" />
+                <line x1="135" y1="80" x2="135" y2="160" stroke="#f97316" strokeWidth="3" />
+                <line x1="85" y1="120" x2="135" y2="160" stroke="#f97316" strokeWidth="2" />
+                <line x1="185" y1="120" x2="135" y2="160" stroke="#f97316" strokeWidth="2" />
 
-                  {/* JCB Arm lifting structure */}
-                  <path d="M330 200 L260 120 L200 130" stroke="#eab308" strokeWidth="6" strokeLinecap="round" />
-                  <rect x="185" y="115" width="20" height="20" fill="#cbd5e1" rx="2" />
+                {/* JCB Arm lifting structure */}
+                <path d="M330 200 L260 120 L200 130" stroke="#eab308" strokeWidth="6" strokeLinecap="round" />
+                <rect x="185" y="115" width="20" height="20" fill="#cbd5e1" rx="2" />
 
-                  {/* Heavy Vehicle (Lorry / Tractor) */}
-                  <rect x="230" y="270" width="105" height="50" rx="3" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
-                  <rect x="335" y="282" width="25" height="38" rx="2" fill="#eab308" />
-                  <circle cx="255" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
-                  <circle cx="305" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
-                  <circle cx="348" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
+                {/* Heavy Vehicle (Lorry / Tractor) */}
+                <rect x="230" y="270" width="105" height="50" rx="3" fill="#1e293b" stroke="#e2e8f0" strokeWidth="2" />
+                <rect x="335" y="282" width="25" height="38" rx="2" fill="#eab308" />
+                <circle cx="255" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
+                <circle cx="305" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
+                <circle cx="348" cy="325" r="12" fill="#0f172a" stroke="#cbd5e1" strokeWidth="2" />
 
-                  {/* Cargo load */}
-                  <path d="M235 270 Q285 240 330 270 Z" fill="#94a3b8" />
-                </svg>
+                {/* Cargo load */}
+                <path d="M235 270 Q285 240 330 270 Z" fill="#94a3b8" />
+                {/* </svg> */}
+                <img src="https://res.cloudinary.com/j2vormve/image/upload/v1784366562/tamilnadu-about-us_jhfqn8.png" alt="" />
 
                 <div className="hero-stats-badge">
                   <span className="hero-stats-number">15+</span>
