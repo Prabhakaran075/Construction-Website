@@ -59,16 +59,16 @@ export default function BuildingMaterials() {
     {
       name: "High-Strength TMT Steel Bars",
       category: "steel",
-      desc: "Thermo-mechanically treated reinforcement steel bars. Available in Fe 500/550 grades from leading mills, providing high tensile strength and seismic protection.",
+      desc: "Thermo-mechanically treated reinforcement steel bars. Sourced from leading brands including JSW, Tata, and certified IS brand 550D grade steel, providing premium tensile strength and seismic protection.",
       unit: "Per Ton",
-      features: ["Fe 500 / 550 grade certified", "High corrosion resistance", "Excellent bendability & weldability"]
+      features: ["Fe 500 / 550D grade certified", "JSW & Tata 550D steel available", "IS Brand 550D grade steel", "High corrosion resistance"]
     },
     {
       name: "Premium OPC & PPC Cement",
       category: "steel",
-      desc: "Portland Pozzolana (PPC) and Ordinary Portland (OPC Grade 53) cement bag supplies. We supply top national brands for high-strength foundations and brickwork.",
+      desc: "Portland Pozzolana (PPC) and Ordinary Portland (OPC Grade 53) cement bag supplies. We supply top premium national brands like Ramco and Ultratech for high-strength foundations and brickwork.",
       unit: "Per 50kg Bag / Bulk Loads",
-      features: ["OPC 53 & PPC available", "Rapid strength development", "Weather-tight protection packaging"]
+      features: ["Ramco & Ultratech brands", "OPC 53 & PPC available", "Rapid strength development", "Weather-tight protection packaging"]
     }
   ];
 
